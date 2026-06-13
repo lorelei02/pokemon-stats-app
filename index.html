@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokemon Stats App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <header id="hero" class="hero">
+        <h1>Pokemon Guesser App</h1>
+        <div id="hero-types" class="hero-types"></div>
+      </header>
+      <form role="search" id="search-form">
+        <label for="search-input">Search for a Pokemon</label>
+        <div class="search-row">
+          <input name="pokemon" id="search-input" placeholder="Search..." required />
+          <button id="search-button">Search</button>
+        </div>
+        <div id="suggestions-dropdown" class="suggestions-dropdown">
+          <ul id="suggestions-list" class="suggestions-list"></ul>
+        </div>
+      </form>
+
+      <div class="output">
+        <div class="top-container">
+          <div class="sprite-column">
+            <div id="sprite-container" class="sprite-container"></div>
+            <div id="gallery" class="gallery">
+              <button id="gallery-prev" class="gallery-btn">‹</button>
+              <div id="gallery-track" class="gallery-track"></div>
+              <button id="gallery-next" class="gallery-btn">›</button>
+            </div>
+          </div>
+          <div class="info-column">
+            <div class="name-and-id">
+              <span id="pokemon-name"></span>
+              <span id="pokemon-id"></span>
+            </div>
+            <div id="types"></div>
+            <div class="size">
+              <span id="pokemon-height"></span>
+              <span id="pokemon-weight"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="description-section" class="description-section">
+          <p id="pokemon-description"></p>
+        </div>
+        <div class="bottom-container">
+          <div id="abilities" class="info-panel abilities"></div>
+          <div class="chart-wrap">
+            <canvas id="stats-chart" aria-label="Pokemon base stats chart"></canvas>
+          </div>
+          <div id="evolutions-section" class="evolutions-section">
+            <h3>Evolution Chain</h3>
+            <div id="evolutions-chain" class="evolutions-chain"></div>
+          </div>
+        </div>
+        <table>
+          <tr>
+            <th>Base HP</th>
+            <th>Base Attack</th>
+            <th>Base Defense</th>
+            <th>Base Special Attack</th>
+            <th>Base Special Defense</th>
+            <th>Base Speed</th>
+          </tr>
+          <tr>
+            <td id="base-hp"></td>
+            <td id="base-attack"></td>
+            <td id="base-defense"></td>
+            <td id="base-special-attack"></td>
+            <td id="base-special-defense"></td>
+            <td id="base-speed"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
